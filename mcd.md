@@ -2,9 +2,9 @@
 
 * Dans le "LIKE" entouré, je vois "many-to-many" avec "1,1". 
 Cette cardinalité indique un "one-to-one".
- ** a coter du user il aurait fallu mettre "0,n" :
- ** Le "0" pour dire que le minimum est 0 (l'utilisateur peut avoir liké 0 mug).
- ** Le "n" pour dire que c'est un nombre qui peut varier, cela peut être 1 comme 10, 100...
+ * a coter du user il aurait fallu mettre "0,n" :
+ * Le "0" pour dire que le minimum est 0 (l'utilisateur peut avoir liké 0 mug).
+ * Le "n" pour dire que c'est un nombre qui peut varier, cela peut être 1 comme 10, 100...
 
 
 * La cardinalité dans ce sens : user -> has -> address 0,n n'est pas bonne dans le contexte. Il est précisé qu'un utilisateur a une ou plusieurs adresses et qu'il peut également ne pas en avoir.
