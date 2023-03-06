@@ -7,12 +7,13 @@ const query = "SELECT * FROM card WHERE element IS NULL";
 
 * La colonne "élément" dans votre deck est constituée uniquement d'un "$" pour afficher un prix, une information qui n'existe pas et aurait dû être remplacée par l'élément.
 
-## optionel
-* Il aurait été préférable de mettre la session secret key dans le .env.
-* Penser à vider les console.log() utilisés pour le développement.
-
 ## point important
 dataMaper.js contient une faille de sécurité SQL. Penser à utiliser les paramètres de cette manière :
 ```javascript
 const cardResults = await client.query("SELECT * FROM card WHERE id = $1, [id]);
 ```
+
+## optionel
+* Il aurait été préférable de mettre la session secret key dans le .env.
+* Penser à vider les console.log() utilisés pour le développement.
+
