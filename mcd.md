@@ -2,7 +2,7 @@
 
 * Dans le "LIKE" entouré, je vois "many-to-many" avec "1,1". 
 Cette cardinalité indique un "one-to-one".
- * a coter du user il aurait fallu mettre "0,n" :
+  * a coter du user il aurait fallu mettre "0,n" :
  * Le "0" pour dire que le minimum est 0 (l'utilisateur peut avoir liké 0 mug).
  * Le "n" pour dire que c'est un nombre qui peut varier, cela peut être 1 comme 10, 100...
 
