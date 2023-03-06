@@ -13,7 +13,7 @@
 ### mon commentaire
 Pour la partie mcd cela ma poser problème j'ai pris des cours regarder plein de resources mais j'avais toujours quelque notion que je comprennais pas et je ne suis pas sur d'avoir tout compris globalement au niveau des tables et des cardinalité je pense être bon mais c'est au niveau de l'action entre que cela ma poser un problème de logique c'est la partie que j'ai le moin compris moi même.
 
-J'ai quand même essayer de faire cet exercice a fond tout en ma nourrissant de plusieurs resources.
+J'ai quand même essayer de faire cet exercice a fond tout en me nourrissant de plusieurs resources.
 
 Pour la partie code je pense que je n'ai pas eu de problème particulier.
 j'ai procéder de cette manière
