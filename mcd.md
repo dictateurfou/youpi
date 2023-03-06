@@ -1,27 +1,21 @@
-* Sur le MCD ci-présent, on ne sait pas quelle est la référence. Ce qui serait bien, c'est de souligner le champ qui sert de liaison (regardez l'exemple de fin).
-
-* "LIKE" étant un mot clé de base de données, je recommanderais de mettre "LIKED".
+* Sur le MCD ci-présent, on ne sait pas quelle est la référence. Ce qui serait bien, c'est de souligner le champ qui sert de liaison (regarder l'exemple a la fin).
 
 * Dans le "LIKE" entouré, je vois "many-to-many" avec "1,1". 
-Cette cardinalité indique un "one-to-one". 
- * Il aurait fallu mettre "0,n" :
+Cette cardinalité indique un "one-to-one".
+ * a coter du user il aurait fallu mettre "0,n" :
  * Le "0" pour dire que le minimum est 0 (l'utilisateur peut avoir liké 0 mug).
  * Le "n" pour dire que c'est un nombre qui peut varier, cela peut être 1 comme 10, 100...
 
 
-* La liaison entre "order" et "product" aurait dû être faite comme avec le "LIKE". En effet, les informations entre les tables peuvent devenir une table avec des relations lors de la mise en pratique.
+* La cardinalité dans ce sens : user -> has -> address 0,n n'est pas bonne dans le contexte. Il est précisé qu'un utilisateur a une ou plusieurs adresses et qu'il peut également ne pas en avoir.
 
- * ci dessous voici un exemple
+* Pour les likes, il aurait été préférable d'ajouter une table intermédiaire. Je te donne un exemple ci-dessous pour illustrer mes propos. J'ai ajouté deux cardinalités avec des commentaires pour que tu comprennes. Je n'en ai pas ajouté à un endroit précis pour que tu puisses le compléter toi-même grâce aux explications.
 
- * ![This is a alt text.](https://cdn.discordapp.com/attachments/760716097925283853/1082069842640769025/dfdf.drawio.png "This is a sample image.")
+ ![This is a alt text.](https://cdn.discordapp.com/attachments/760716097925283853/1082147728915709982/dfdf.drawio_5.png "This is a sample image.")
  
-* explication
- * * "create order" ici deviendra une table en base de données. On lui rajoute donc les informations complémentaires. Elle sera liée avec l'ID de l'utilisateur et l'ID du produit. Pas besoin de le spécifier dans "create order" étant donné que les tables sont liées.
-    * "user" -> "create order" cardinalité "0,n" : en effet, un utilisateur peut avoir plusieurs "order".
-    * "create order" -> "product" cardinalité "1,n" : un "order" peut contenir un ou plusieurs produits.
+Dans l'ensemble, c'est plutôt bien. Je t'invite à prendre en compte les commentaires pour corriger tes erreurs.
 
-### bonus:
-    On pourrait modifier "create order" pour "add to basket" qui serait plus parlant .
-Voici un exemple (les argument ne sont pas a prendre en compte cela sert juste d'exemple) :
-
-* ![This is a alt text.](https://cdn.discordapp.com/attachments/760716097925283853/1082083192049246388/dfdf.drawio_2.png "This is a sample image.")
+Si mes explications n'ont pas suffi, voici deux courtes vidéos qui sont efficaces pour comprendre.
+ 
+ https://www.youtube.com/watch?v=2Oskf-eiB60
+ https://www.youtube.com/watch?v=WvMheNdSCoA
