@@ -17,3 +17,4 @@ const cardResults = await client.query("SELECT * FROM card WHERE id = $1, [id]);
 * Il aurait été préférable de mettre la session secret key dans le .env.
 * Penser à vider les console.log() utilisés pour le développement.
 
+Bon travail dans l'essemble je t'encourage a continuer sur cette voix la.
